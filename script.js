@@ -77,7 +77,7 @@ function create_book_card(book){
     label_slide.appendChild(span_slide);
     book_top.appendChild(label_slide);
     input_slide.onclick=function(e){
-        console.log("click",e.target);
+        // console.log("click",e.target);
         let card_book_title=e.target.parentNode.parentNode.parentNode.firstChild.nextSibling.innerText
         if(book_top.classList.contains("card_incomplete")){
             // console.log("clikc",e.target.parentNode.parentNode.parentNode.firstChild.nextSibling.innerText);
