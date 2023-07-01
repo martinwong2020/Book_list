@@ -1,9 +1,7 @@
 let user_library=[];
 window.onload=() =>{
     get_data_local();
-    if(user_library.size!=0){
-        display_book();
-    } 
+    display_book();
 };
 
 
@@ -149,5 +147,8 @@ function save_data_local(){
 function get_data_local(){
     let storage=localStorage.getItem("user_library");
     storage=JSON.parse(storage);
-    user_library=storage;
+    if(storage!==null){
+        user_library=storage;
+    }
+    
 }
