@@ -1,7 +1,9 @@
 let user_library=[];
 window.onload=() =>{
     get_data_local()
-    display_book();
+    if(user_library.length!=0){
+        display_book();
+    } 
 };
 
 
