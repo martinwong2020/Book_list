@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Book List</title>
+<link rel="stylesheet" href="style.css">
+
+<body>
+    <div id="top">
+        <div id="top_container">
+            <h1>Library</h1>
+            <!-- <button id="add_book">+Add</button> -->
+        </div>
+    </div>
+    <div id="body">
+        <div id="add_container">
+            <div id="inner_add">
+                <div id="card_rest">
+                    <img src="./img/add_icon.svg" alt="Add" id="add_icon">
+                </div>
+                <div id="card_back">
+                    <form action="" id="book_form">
+                        <h1>Add a book</h1>
+                        <input
+                            class="input"
+                            type="text"
+                            id="book_name"
+                            placeholder="Book Name"
+                            required
+                        />
+                        <input
+                            class="input"
+                            type="number"
+                            id="book_page"
+                            placeholder="Book page"
+                            required
+                        />
+                        <div>
+                            <h3>Completed</h3>
+                                <label class="switch">
+                                    <input type="checkbox" id="check">
+                                    <span class="slider"></span>
+                                </label>
+                        </div>
+                        <button type="submit" class="submit_btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div id="bottom"></div>
+    
+</body>
+<script src="script.js"></script>
+</html> 

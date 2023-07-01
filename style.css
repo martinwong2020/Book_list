@@ -1,0 +1,241 @@
+body {
+    margin:0;
+    background-color: #7C7A7A;
+    overflow-x: hidden;
+}
+#body{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin:auto;
+    
+}
+#top{
+    width:100vw;
+    height:15vh;
+    background-color: #494949;
+    display:flex;
+    justify-content: space-between;
+    /* padding-left:20px;
+    padding-right: 20px; */
+
+}
+#top_container{
+    width:100vw;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:30px;
+}
+.card_container{
+    height:max(200px,350px);
+    width:max(200px,350px);
+    margin:10px;
+    background-color: #2c2828 ;
+    border-radius: 15px;
+    border: black 5px solid;
+    color:white;
+    text-align: center;
+    
+}
+.card_header{
+    width:100%;
+    height:25%;
+    background-color: green;
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-top-left-radius: 13px;
+    border-top-right-radius: 13px;
+}
+
+.card_incomplete{
+    background-color: red;
+}
+.card_complete{
+    background-color: green;
+}
+#add_container{
+    height:max(200px,350px);
+    width:max(200px,350px);
+    /* margin:10px; */
+    background-color: transparent  ;
+    border-radius: 15%;
+    /* border: black 5px solid; */
+    /* display:flex;
+    justify-content: center;
+    align-items: center; */
+    margin:10px;
+    perspective: 1000px;
+    
+}
+#inner_add{
+    position:relative;
+    width:100%;
+    height:100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    border-radius: 15px;
+    border:5px solid black;
+    /* border:solid 2px gray; */
+    z-index: 100;
+}
+#add_container:hover #inner_add{
+    transform:rotateY(180deg);
+}
+
+#card_rest, #card_back{
+    position:absolute;
+    width:100%;
+    height:100%;
+    border-radius: 13.9%;
+    -webkit-backface-visibility: hidden; 
+    backface-visibility: hidden;
+    /* background-color: black; */
+}
+#card_rest{
+    background-color:transparent;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+#card_back{
+    transform: rotateY(180deg);
+    /* display: flex;
+    justify-content: center; */
+    /* vertical-align: middle; */
+    /* display:flex;
+    flex-direction: column; */
+}
+#book_form{
+    height:100%;
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+
+#add_icon{
+    max-width:35%;
+    max-height:35%;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 30px;
+    margin:10px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 23px;
+    width: 23px;
+    left: 3px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(21px);
+    -ms-transform: translateX(21px);
+    transform: translateX(21px);
+  }
+  
+
+  .input, .submit_btn{
+    width:80%;
+    margin:auto;
+    height:30px;
+    border:solid 2px black;
+  }
+
+  .book_title{
+    height:35%;
+    width:100%;
+    /* background-color: black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    font-family: Georgia, serif;
+  }
+
+  .remove_card{
+    font-size: 1em;
+    font-family:Georgia, serif;
+    height:10%;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius:15px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    transition:background-color 0.5s linear;
+    transition:color 0.5s linear;
+  }
+  .remove_card:hover{
+    background-color: #ba181b;
+    color: #161a1d;
+  }
+  .book_page{
+    height:7%;
+    width:100%;
+    font-size:1.25em;
+    font-family:Georgia, serif;
+    align-items: center;
+  }
+
+  
+/* #add_book{
+    background-color: transparent;
+    border:none;
+    
+    display:block;
+    width: 100px;
+    height: 30px;
+    font-size: 1.7em;
+    background-size: 200% 100%;
+    background:linear-gradient(to right,#c2720a 50%,#deb887 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    
+    transition: all .5s ease-out;
+
+}
+#add_book:hover{
+    background-position:left bottom;
+} */
